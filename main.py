@@ -1,29 +1,40 @@
-import pygame
-from os.path import join
-from constants import *
+from settings import *
+from player import Player
 
-class Player(pygame.sprite.Sprite):
-    def __init__(self, groups):
-        super().__init__(groups)
-        self.image = pygame.load(join('images', 'player', 'o.png')).convert_alpha()
-        self.rect = self.image.get_frect(center = (WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2))
-        self.direction = pygame.Vector2()
-
-# pygame setup
-pygame.init()
-display = pygame.display.set_mode(WINDOW_WIDTH, WINDOW_HEIGHT)
-clock = pygame.time.Clock()
-running = True
-
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+class Game:
+    def __init__(self):
+        # setup
+        pygame.init()
+        self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+        pygame.display.set_caption('Survivor')
+        self.clock = pygame.time.Clock()
+        self.running = True
+        
+        # groups
+        self.all_sprites = pygame.sprite.Group()
+        
+        # sprites
+        self.player = Player((400, 300), self.all_sprites)
+    
+    def run(self):
+        while self.running:
+            # dt
+            dt = self.clock.tick() / 1000
+                        
+            # event loop
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.running = False
             
-    display.fill("black")
-    
-    pygame.display.flip()
-    
-    clock.tick(60)
-    
-pygame.quit()
+            # update
+            self.all_sprites.update(dt)
+            
+            # draw
+            self.all_sprites.draw(self.display_surface)
+            pygame.display.update()
+            
+        pygame.QUIT()
+
+if __name__ == '__main__':      
+    game = Game()
+    game.run()
