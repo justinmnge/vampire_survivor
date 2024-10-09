@@ -13,7 +13,7 @@ Test your reflexes, improve your strategy, and push your limits in this haunting
 
 ![Vampire_survivor](https://github.com/user-attachments/assets/754d9226-a641-41b9-80e7-98bf04d162c5)
 
-## How to Play
+# How to Play
 
 1. **Run the Game**: Open your terminal and type `python3 main.py` to start the game.
    
@@ -37,3 +37,19 @@ Good luck!
    - Make the objects wrap around the screen instead of disappearing
    - Create different weapon types
 
+## Lessons Observed in the Project:
+   - ### Technical Skills:
+      - Implemented player controls and shooting mechanics
+      - Created collision detection between player, enemies, and projectiles
+      - Manage multiple moving entities simultaneously
+      - Implemented efficient game loop for smooth performance
+      - Balanced game difficulty through enemy speed and spawn rates
+
+   - ### Game Development Concepts:
+      - Reinforcement of basic game architecture
+      - Reinforcement of Object-oriented programming in a game concept
+
+   - ### Tools & Frameworks:
+      - Practical experience with the Pygame library
+      - Practiced asset integrations (graphics and audio)
+      - Practiced integration of Tiled asset maps
