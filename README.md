@@ -11,7 +11,7 @@ With each passing minute, the swarm grows larger, faster, and more deadly. How l
 
 Test your reflexes, improve your strategy, and push your limits in this haunting battle against the inevitable. In Vampire Survivor, it's not about if you'll fall – it's about how long you can stand against the darkness.
 
-![vampire_survivor](https://github.com/user-attachments/assets/817719c3-e0b7-4276-b39e-225955108d97)
+![Vampire_survivor](https://github.com/user-attachments/assets/754d9226-a641-41b9-80e7-98bf04d162c5)
 
 ## How to Play
 
